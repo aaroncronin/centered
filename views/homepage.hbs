@@ -1,0 +1,27 @@
+<table>
+    <th>Category</th>
+    <th>Name</th>
+    <th>Studio</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th>Link</th>
+
+    {{#each fileData}}
+    <tr>
+        <td>{{category}}</td>
+        <td>{{name}}</td>
+        <td>{{studio}}</td>
+        <td>{{address}}</td>
+        <td>{{phone}}</td>
+        <td>{{date}}</td>
+        <td>{{time}}</td>
+        <td><img src={{image}}></td>
+        <td>{{description}}</td>
+        <td><a href={{link}}>{{link}}</a></td>
+    </tr>
+    {{/each}}
+</table>
