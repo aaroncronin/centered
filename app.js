@@ -3,6 +3,9 @@ const path = require("path");
 const fs = require("fs");
 const app = express();
 const cors = require("cors");
+const axios = require("axios");
+const fetchUrl = require("fetch").fetchUrl;
+let func = require("./scrapeTest");
 
 const PORT = 5000;
 
@@ -16,5 +19,8 @@ if (process.env.NODE_ENV === "PRODUCTION") {
     res.sendFile(path.join(__dirname, "my-app", "build", "index.html"));
   });
 }
+//console.log(func.func);
 
+//setInterval(() => func.func, 60 * 60 * 1000);
+// fs.writeFileSync("./my-app/src/test.txt", "hello");
 app.listen(PORT);

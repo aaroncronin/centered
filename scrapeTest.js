@@ -3,7 +3,7 @@ const ObjectsToCsv = require("objects-to-csv");
 const fs = require("fs");
 const { time } = require("console");
 
-(async () => {
+const func = (async () => {
   let url =
     "https://mindbody.io/fitness/search/classes?page=1&location=New+York%2C+NY%2C+US&q=wellness";
 
@@ -141,10 +141,14 @@ const { time } = require("console");
     content.push(newData);
   }
 
-  new ObjectsToCsv(content).toDisk("./test.csv");
+  fs.writeFileSync("./my-app/src/data.json", content);
+
+  //new ObjectsToCsv(content).toDisk("./test.csv");
 
   await browser.close();
 })();
+
+module.exports.func = func;
 
 /**
  * category: .ClassTimeDetails_category__sLaU5

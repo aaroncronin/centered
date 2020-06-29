@@ -88,19 +88,6 @@ tr {
   border-bottom: 1px dotted grey;
 }
 
-#readMore {
-  cursor: pointer;
-  font-size: large;
-  margin-bottom: 5px;
-  background-color: ;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: white;
-}
-
 #bookNow {
   cursor: pointer;
   margin-top: 10px;
@@ -122,4 +109,56 @@ tr {
 #name {
   font-size: x-large;
   color: #660066;
+  width: 30%;
+}
+
+.calShow {
+  position: absolute;
+  visibility: visible;
+  margin: -10% 20%;
+  font-size: medium;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.calHide {
+  display: none;
+}
+
+.calSelect {
+  padding: 1%;
+  padding-left: 0;
+  background-color: white;
+  text-align: left;
+  color: grey;
+  font-size: large;
+  position: relative;
+  border: 1px solid lightgrey;
+}
+
+.calendar {
+  height: 40px;
+  font-size: large;
+  color: grey;
+  background-color: white;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+.noShowLogin {
+  display: none;
+}
+
+.showLogin {
+  position: absolute;
+  height: 30%;
+  width: 50%;
+  background: lightgrey;
+  margin-left: -25%;
+  left: 50%;
+  top: 30%;
+  z-index: 10;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
